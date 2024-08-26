@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mass-delete sur Discord</h1>
+    <p>Attention cette manip ne permet de supprimer que les messages salon par salon. Cependant elle est beaucoup plus rapide que de le faire un par un</p>
+    <p>Cette manip peut paraître compliquée mais en réalité elle est très simple une fois qu'on a compris le principe.</p>
+    <p>Il s'agit juste de :</p>
+    <li>
+        <ul>Ouvrir la console de commande</ul>
+        <ul>Coller du code dedans</ul>
+        <ul>Retrouver le token d'autorisation en 10sec</ul>
+        <ul>Et enfin appuyer sur entrée ou exécuter</ul>
+    </li>
+
+    <h2>Etape 1 : Se connecter à Discord via votre navigateur Web</h2>
+    <p>La manip ne marche pas si vous le faites via l'appli</p>
+
+    <h2>Etape 2 : Se rendre sur le MP ou salon duquel vous souhaitez effacer l'intégralité de vos messages</h2>
+    <p>Si vous souhaitez effacer l'intégralité de vos messages d'un serveur entier (par exemple sur tout le Backup), il faudra selectionner salon après salon</p>
+
+    <h2>Etape 3 : La console de développement</h2>
+    <p>Cela va vous ouvrir le console de developpement. Il suffira de copier/coller une grosse part de code tout préparé dans la console</p>
+    <h3>Ouvrir la console de développement</h3>
+    <p>Sur Windows :</p>
+    <li>
+        <ul>Chrome / Firefox (Windows, Linux, Chrome OS): F12 ou Controle+Shift+J</ul>
+    </li>
+    <p>Sur Mac :</p>
+    <li>
+        <ul>Chrome (Mac): Commande+Option+J</ul>
+        <ul>Safari (Mac): Commande+Option+C</ul>
+        <p>Si la console de commande ne s'ouvre pas sur Safari : Allez dans le menu Safari / Réglages / Avancé et cochez tout en bas "Affichez les fonctionnalités pour les développeurs web" </p>
+    </li>
+    <p>Vous devriez obtenir le résultart suivant (ignorez-le) :</p>
+    <img src="attention.png" alt="Avertissement">
+
+    <h2>Etape 4 : Copier-coller le code dans la console de commande</h2>
+    <p>Ouvrez la page <a href="code.js" target="_blank">Accédez au code</a> et copiez l'intégralité du code que vous collerez dans le rectangle de la console de commande.</p>
+    <p>Sur PC, il me semble qu'il suffit de le coller en dessous du message d'avertissement.</p>
+    <p>Sur Mac il se peut que lorsque vous ouvrez la console, vous arrivez sur l'inspecteur. Il suffit de cliquer sur le mot "console" dans la barre
+        rectangulaire en haut et vous trouverez le message d'avertissement à droite. Vous pouvez donc coller le code à gauche.</p>
+    <img src="console_mac.jpg" alt="console de commande sur Mac">
+        <p>Ensuite appuye sur Entrée ou cliquer sur Exécuter</p>
+        <p>Il se peut que vous ayez un message de blocage de pop-up. Si c'est le cas cliquez sur "Autoriser".</p>
+    <p>Cela devrait donc s'ouvrir :</p>
+    <img src="DDM.png" alt="token d'autorisation">
+
+    <h2>Etape 5 : Recupérer les tokens</h2>
+    <p>Pour les token "Author" et "Guild/Channel" il suffira d'appuyer sur les boutons bleus "Auto". Cela devrait vous afficher dans les encarts, une série de chiffre</p>
+    <p>Pour le token "Authorization", cliquer n'affiche plus les chiffres automatiquement. Il va falloir fouiller dans la console pour trouver cette clé d'autorisation</p>
+
+    <h2>Etape 6 : Trouver la clé d'autorisation</h2>
+    <>
+        <ul>Dans la console de commande, aller dans "Network" ou "Réseau"</ul>
+        <ul>Allez sur "XHR"</ul>
+        <ul>Tapez "api/v9" pour le filtre de recherches </ul>
+        <ul>Dans la partie ou "En-têtes" ou "Headers" cherchez "En-tête de la requête". Vous devriez trouver "Authorization" suivi d'une longue suite de lettres
+            et de chiffres. C'est votre token "Authorization"</ul>
+        <ul>Copiez-le. Ensuite retournez sur la console. Refaites exécuter ou Entrée le code précédement collé et vous retomberez sur la fenêtre des tokens.
+            Vous pourez alors entrer le token d'autorisation dans la fenêtre appropriée.
+        </ul>
+
+        <img src="XHR.png" alt="retrouver le token">
+        <br>
+        <br>
+
+        <img src="token_trouvé.jpg">
+    </li>
+
+    
+
+    <p>NE PARTAGEZ JAMAIS VOTRE authTOKEN !</p>
+
+    <h2>Etape 7 : Cliquez sur le bouton "Start"</h2>
+    <p>Une petite fenêtre devrait s'ouvrir alors vous demandant si vous êtes sûr.e de vouloir supprimer X messages (selon votre nombre de message posté dans le MP ou le salon). Il suffira de cliquer sur "Ok"
+        et les messages se supprimeront ensuite, le temps de suppression peut être parfois un peu long selon voytr nombre de messages postés dans le salon.
+        Si vous souhaitez supprimer les autres messages des autres salons, il suffira de cliquer sur chaque salon et de recommencer la manip à partir de "Excuter"
+        Bien entendu, vous n'aurez pas à retrouver le token d'authorization, dès lors que vous l'avez copié il suffira de le coller à nouveau au même endroit.
+    </p>
+
+</body>
+</html>
